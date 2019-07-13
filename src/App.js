@@ -3,6 +3,10 @@ import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import friends from "./friends.json";
+import Score from "./components/Score";
+
+var userPoints = 0;
+var highScore = 0;
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -24,10 +28,12 @@ class App extends Component {
     return arra1;
   };
 
-  removeFriend = (id, index) => {
-    if (this.state.friends.clicked === true) {
+  clickFriend = index => {
+    if (this.state.friends[index].clicked === true) {
+      highScore = userPoints;
       console.log("Here I am...Working!");
     } else {
+      userPoints++;
       this.state.friends[index].clicked = true;
       const newFriends = this.shuffle(this.state.friends);
       // Filter this.state.friends for friends with an id not equal to the id being removed
@@ -42,9 +48,10 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Friends Matters</Title>
+        <Score />
         {this.state.friends.map(friend => (
           <FriendCard
-            removeFriend={this.removeFriend}
+            clickFriend={this.clickFriend}
             id={friend.id}
             key={friend.id}
             name={friend.name}
