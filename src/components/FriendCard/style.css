@@ -51,7 +51,10 @@
 .card > .remove:hover {
   color: #17ff5d;
   font-size: 50px;
-
   transition: .5s;
+}
 
+li {
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bold;
 }
