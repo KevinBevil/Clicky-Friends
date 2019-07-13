@@ -11,7 +11,9 @@ var highScore = 0;
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends
+    friends: friends,
+    userScore: userPoints,
+    highScore: highScore
   };
 
   shuffle = arra1 => {
@@ -34,6 +36,7 @@ class App extends Component {
       console.log("Here I am...Working!");
     } else {
       userPoints++;
+      this.state.userScore = userPoints;
       this.state.friends[index].clicked = true;
       const newFriends = this.shuffle(this.state.friends);
       // Filter this.state.friends for friends with an id not equal to the id being removed
@@ -48,7 +51,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Friends Matters</Title>
-        <Score />
+        <Score userScore={this.state.userScore}highScore={this.state.highScore}/>
         {this.state.friends.map(friend => (
           <FriendCard
             clickFriend={this.clickFriend}

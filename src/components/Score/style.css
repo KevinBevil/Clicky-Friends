@@ -1,4 +1,14 @@
-span {
+#score-row {
    display: flex;
    width: 100%;
+   background: #e1b9e8;
+   border: 5px solid #7631f3;
+   border-radius: 25px;
+}
+#score-divider {
+   margin-left: 150px;
+}
+
+#score {
+   margin-left: 30px;
 }
