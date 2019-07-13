@@ -3,72 +3,84 @@
     "id": 1,
     "name": "Carl",
     "image": "./images/Carl.jpg",
-    "occupation": "Police Officer"
+    "occupation": "Police Officer",
+    "clicked": false
   },
   {
     "id": 2,
     "name": "Eddie",
     "image": "./images/Eddie.jpg",
-    "occupation": "High School Student"
+    "occupation": "High School Student",
+    "clicked": false
   },
   {
     "id": 3,
     "name": "Estelle",
     "image": "./images/Estelle.jpg",
-    "occupation": "Matriarch"
+    "occupation": "Matriarch",
+    "clicked": false
   },
   {
     "id": 4,
     "name": "Harriette",
     "image": "./images/Harriette.jpg",
-    "occupation": "Director of Security"
+    "occupation": "Director of Security",
+    "clicked": false
   },
   {
     "id": 5,
     "name": "Judy",
     "image": "./images/Judy.jpg",
-    "occupation": "Child"
+    "occupation": "Child",
+    "clicked": false
   },
   {
     "id": 6,
     "name": "Laura",
     "image": "./images/Laura.jpg",
-    "occupation": "High School Student"
+    "occupation": "High School Student",
+    "clicked": false
   },
   {
     "id": 7,
     "name": "Myra",
     "image": "./images/Myra.jpg",
-    "occupation": "High School Student"
+    "occupation": "High School Student",
+    "clicked": false
   },
   {
     "id": 8,
     "name": "Rachel",
     "image": "./images/Rachel.jpg",
-    "occupation": "Singer"
+    "occupation": "Singer",
+    "clicked": false
   },
   {
     "id": 9,
     "name": "Richie",
     "image": "./images/Richie.jpg",
-    "occupation": "Child"
+    "occupation": "Child",
+    "clicked": false
   },
   {
     "id": 10,
     "name": "Stefan",
     "image": "./images/Stefan.jpg",
-    "occupation": "Coolest guy since the Fonz"
+    "occupation": "Coolest guy since the Fonz",
+    "clicked": false
   },
   {
     "id": 11,
     "name": "Waldo",
     "image": "./images/Waldo.png",
-    "occupation": "High School Student"
+    "occupation": "High School Student",
+    "clicked": false
   },
   {
     "id": 12,
     "name": "Steve",
     "image": "./images/Steve.jpg",
-    "occupation": "High School Student"
+    "occupation": "High School Student",
+    "clicked": false
   }
 ]
