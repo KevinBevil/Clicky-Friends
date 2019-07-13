@@ -31,7 +31,7 @@ class App extends Component {
   removeFriend = id => {
     const newFriends = this.shuffle(this.state.friends)
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = newFriends.filter(friend => friend.id !== id);
+    const friends = newFriends;
     // Set this.state.friends equal to the new friends array
     this.setState({ friends });
   };
