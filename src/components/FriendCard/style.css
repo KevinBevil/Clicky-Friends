@@ -39,22 +39,26 @@
 }
 
 .card > .remove {
-  color: #41b85f;
-  font-size: 48px;
+  color: #17ff5d;
+  font-size: 52px;
   position: absolute;
   top: -20px;
   right: 5px;
   cursor: pointer;
-  transition: .5s;
+  transition: .3s;
 }
 
 .card > .remove:hover {
   color: #17ff5d;
-  font-size: 50px;
-  transition: .5s;
+  font-size: 53px;
+  transition: .3s;
+  box-shadow: 0 5px 6px rgba(44, 44, 44, 0.384), 0 5px 6px rgba(110, 110, 110, 0.452);
+
 }
 
 li {
   font-family: 'Architects Daughter', cursive;
   font-weight: bold;
+  font-size: 16px;
+  color: #3d1f21;
 }
