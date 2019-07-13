@@ -10,9 +10,28 @@ class App extends Component {
     friends
   };
 
+  shuffle = arra1 => {
+    var ctr = arra1.length,
+      temp,
+      index;
+
+    while (ctr > 0) {
+      // Pick a random index
+      index = Math.floor(Math.random() * ctr);
+      // Decrease ctr by 1
+      ctr--;
+      // And swap the last element with it
+      temp = arra1[ctr];
+      arra1[ctr] = arra1[index];
+      arra1[index] = temp;
+    }
+    return arra1;
+  };
+
   removeFriend = id => {
+    const newFriends = this.shuffle(this.state.friends)
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
+    const friends = newFriends.filter(friend => friend.id !== id);
     // Set this.state.friends equal to the new friends array
     this.setState({ friends });
   };
@@ -21,7 +40,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Friends List</Title>
+        <Title>Friends Matters</Title>
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
@@ -30,7 +49,6 @@ class App extends Component {
             name={friend.name}
             image={friend.image}
             occupation={friend.occupation}
-            location={friend.location}
           />
         ))}
       </Wrapper>
