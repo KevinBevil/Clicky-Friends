@@ -12,8 +12,8 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     friends: friends,
-    userScore: userPoints,
-    highScore: highScore
+    userScore: 0,
+    highScore: 0
   };
 
   shuffle = arra1 => {
@@ -32,8 +32,18 @@ class App extends Component {
 
   clickFriend = index => {
     if (this.state.friends[index].clicked === true) {
-      highScore = userPoints;
-      console.log("Here I am...Working!");
+      if (userPoints > this.state.highScore) {
+
+        this.state.highScore = userPoints;
+        this.state.userScore = 0;
+        userPoints = 0;
+        for (let i = 0; i < this.state.friends.length; i++) {
+          this.state.friends[i].clicked = false;
+          console.log(this.state.friends[i].clicked);
+        }
+        alert("Oops.  You already clicked that friend.  Click another friend to start a new game!")
+        this.forceUpdate();
+      }
     } else {
       userPoints++;
       this.state.userScore = userPoints;
