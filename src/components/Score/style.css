@@ -2,11 +2,12 @@
    display: flex;
    width: 100%;
    background: #e1b9e8;
-   border: 5px solid #7631f3;
-   border-radius: 25px;
+   border: 3px solid #7631f3;
+   border-radius: 45px;
+   font-size: 15px;
 }
 #score-divider {
-   margin-left: 150px;
+   margin-left: 280px;
 }
 
 #score {
