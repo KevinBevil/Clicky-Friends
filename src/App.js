@@ -33,17 +33,18 @@ class App extends Component {
   clickFriend = index => {
     if (this.state.friends[index].clicked === true) {
       if (userPoints > this.state.highScore) {
-
         this.state.highScore = userPoints;
         this.state.userScore = 0;
-        userPoints = 0;
-        for (let i = 0; i < this.state.friends.length; i++) {
-          this.state.friends[i].clicked = false;
-          console.log(this.state.friends[i].clicked);
-        }
-        alert("Oops.  You already clicked that friend.  Click another friend to start a new game!")
-        this.forceUpdate();
       }
+      userPoints = 0;
+      for (let i = 0; i < this.state.friends.length; i++) {
+        this.state.friends[i].clicked = false;
+        console.log(this.state.friends[i].clicked);
+      }
+      alert(
+        "Oops.  You already clicked that friend.  Click another friend to start a new game!"
+      );
+      this.forceUpdate();
     } else {
       userPoints++;
       this.state.userScore = userPoints;
@@ -61,7 +62,10 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Friends Matters</Title>
-        <Score userScore={this.state.userScore}highScore={this.state.highScore}/>
+        <Score
+          userScore={this.state.userScore}
+          highScore={this.state.highScore}
+        />
         {this.state.friends.map(friend => (
           <FriendCard
             clickFriend={this.clickFriend}
